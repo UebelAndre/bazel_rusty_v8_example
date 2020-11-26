@@ -23,6 +23,6 @@ def rusty_v8_repositories():
     http_file(
         name = "librusty_v8",
         urls = [_static_lib_url(version, profile, target)],
-        #sha256 = "TODO",
+        sha256 = "f0f077a7472e6e6f5730b60b9f58f3427eaad4329182ed6a2277e38e1ee48263",
         downloaded_file_path = lib_name,
     )

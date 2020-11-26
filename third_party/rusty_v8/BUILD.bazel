@@ -1,6 +1,8 @@
+load("@rules_cc//cc:defs.bzl", "cc_import")
+
 package(default_visibility = ["//visibility:public"])
 
-alias(
+cc_import(
     name = "rusty_v8_lib",
-    actual = select({"//conditions:default": "@librusty_v8//file"}),
+    static_library = select({"//conditions:default": "@librusty_v8//file"}),
 )

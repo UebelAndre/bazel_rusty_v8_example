@@ -17,7 +17,9 @@ default_gen_buildrs = true
 
 [package.metadata.raze.crates.rusty_v8.'*']
 gen_buildrs = false
-data_attr = "[\"@bazel_rusty_v8_example//third_party/rusty_v8:rusty_v8_lib\"]"
+additional_deps = [
+    "@bazel_rusty_v8_example//third_party/rusty_v8:rusty_v8_lib",
+]
 additional_flags = [
     "-lstatic=rusty_v8",
     "-Ldependency=$(rootpath @bazel_rusty_v8_example//third_party/rusty_v8:rusty_v8_lib)",
