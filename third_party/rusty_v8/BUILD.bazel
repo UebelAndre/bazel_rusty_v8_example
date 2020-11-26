@@ -1,0 +1,6 @@
+package(default_visibility = ["//visibility:public"])
+
+alias(
+    name = "rusty_v8_lib",
+    actual = select({"//conditions:default": "@librusty_v8//file"}),
+)
